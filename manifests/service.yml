@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "grpck-9ef4"
+    labels:
+        app: "grpck-9ef4"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 5000
+      targetPort: 5000
+      protocol: TCP
+      name: http
+    selector:
+        app: "grpck-9ef4"

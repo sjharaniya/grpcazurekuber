@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "grpck-9ef4"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "grpck-9ef4"
+  template:
+    metadata:
+      labels:
+        app: "grpck-9ef4"
+    spec:
+      containers:
+        - name: "grpck-9ef4"
+          image: "grpcconreg.azurecr.io/grpck"
+          ports:
+          - containerPort: 5000
